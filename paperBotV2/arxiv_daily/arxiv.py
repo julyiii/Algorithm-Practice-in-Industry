@@ -27,8 +27,8 @@ RETURN_PAPERS = int(os.environ.get("RETURN_PAPERS", "20"))
 def call_deepseek_api(prompt_content: str,
                       
                       api_key: str = None,
-                      model: str = "deepseek-chat",
-                      base_url: str = "https://api.deepseek.com/v1"):
+                      model: str = " gpt-5-mini",
+                      base_url: str = "https://api.chatanywhere.tech/v1"):
     """
     调用 DeepSeek API 并以 JSON 格式返回结果。
     Args:
