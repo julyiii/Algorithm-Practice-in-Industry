@@ -1,5 +1,5 @@
-# 这个工作流负责在arxiv处理和网页生成完成后发送飞书消息
-name: arxiv_feishu_msg
+# 这个工作流负责在arxiv处理和网页生成完成后发送钉钉消息
+name: arxiv_dingding_msg
 on:
   # 在完整的arxiv处理工作流完成后触发
   workflow_run:
@@ -14,7 +14,7 @@ env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
-  send_feishu_notification:
+  send_dingding_notification:
     runs-on: ubuntu-latest
     # 当自动触发时检查前一个工作流成功，手动触发时无条件运行
     if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
@@ -38,13 +38,14 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      # 发送飞书消息
-      - name: Send Feishu message
+      # 发送钉钉消息
+      - name: Send DingTalk message
         env:
           # 可配置的环境变量
-          FEISHU_URL: ${{ secrets.FEISHU_URL }}
+          DINGTALK_ACCESS_TOKEN: ${{ secrets.DINGTALK_ACCESS_TOKEN }}
+          DINGTALK_SECRET: ${{ secrets.DINGTALK_SECRET }}
           # 确保脚本可以找到所需模块
           PYTHONPATH: ${{ github.workspace }}
         run: |
           cd paperBotV2/arxiv_daily
-          python arxiv_feishu_msg.py
+          python arxiv_dingding_msg.py

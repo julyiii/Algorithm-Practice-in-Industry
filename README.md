@@ -35,8 +35,8 @@
 
 
 ## 搜广推论文推送Bot 【✨Newest:网页版本🥹=>[点击查看](https://doragd.github.io/Algorithm-Practice-in-Industry/arxiv_daily)】
-* Arxiv论文：利用github action + 彩云小译 + 飞书机器人每天推送cs.IR和cs.CL的新论文到飞书群组中。[配置文件](https://github.com/Doragd/Algorithm-Practice-in-Industry/blob/main/.github/workflows/push_arxiv_daily.yml)
-* 顶会论文：利用github action + 彩云小译 + 飞书机器人每天推送搜广推顶会的论文到到飞书群组中。[配置文件](https://github.com/Doragd/Algorithm-Practice-in-Industry/blob/main/.github/workflows/push_conf_daily.yml)
+* Arxiv论文：利用github action + 彩云小译 + 钉钉机器人每天推送cs.IR和cs.CL的新论文到钉钉群组中。[配置文件](https://github.com/Doragd/Algorithm-Practice-in-Industry/blob/main/.github/workflows/arxiv_dingding_msg.yml)
+* 顶会论文：利用github action + 彩云小译 + 钉钉机器人每天推送搜广推顶会的论文到钉钉群组中。[配置文件](https://github.com/Doragd/Algorithm-Practice-in-Industry/blob/main/.github/workflows/push_conf_daily.yml)
 * PS: 虽然论文没太大用，但是可以无聊时候刷刷，扩展下思路。
 * 比如早上通勤的时候，可以刷刷推送，看看有没有有意思的论文，也不需要花太多时间，毕竟摘要都翻译好了~
 
